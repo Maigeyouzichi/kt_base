@@ -1,7 +1,7 @@
 /**
  * 反引号`` (波浪线的键位)
  * @author lihao on 2022/3/15
- * {@link ktBase12.class}
+ * {@link ktBase12.class} .
  */
 fun main() {
     我是一个函数("Jay")
