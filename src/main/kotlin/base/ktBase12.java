@@ -1,3 +1,5 @@
+package base;
+
 /**
  * 被kotlin调用的类
  * @author lihao on 2022/3/15
