@@ -77,8 +77,6 @@ private fun function01() {
     val len = "hello".count()
     println(len)//5
 
-    val rlen = "hello".count(){
-        it == 'l'
-    }
+    val rlen = "hello".count(){it == 'l'}//it等价于每个字符 Char
     println(rlen)//2
 }
