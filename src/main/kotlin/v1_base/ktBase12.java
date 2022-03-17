@@ -1,4 +1,4 @@
-package base;
+package v1_base;
 
 /**
  * 被kotlin调用的类
