@@ -6,10 +6,20 @@ package v4_coll
  */
 
 fun main() {
-    CollectTest().function4()
+    CollectTest().function5()
 }
 
 class CollectTest {
+
+    /**
+     * 解构
+     */
+    fun function5() {
+        var list = listOf(1, 2, 3, 4)
+        var (v1, v2, v3) = list
+        //v1 = -1
+        println("v1: $v1, v2: $v2, v3: $v3")
+    }
 
     /**
      * 遍历
