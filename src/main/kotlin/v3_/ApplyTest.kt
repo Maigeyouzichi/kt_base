@@ -9,6 +9,7 @@ import sun.security.util.Password
  * with -> 类似run
  * also -> 类似apply 1,返回obj本身 2, 使用it
  * takeIf -> 大部分配合 :? 空操作符一起使用
+ * takeUnless -> 同takeIf相反
  * @author lihao on 2022/3/17
  */
 fun main() {
