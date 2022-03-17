@@ -13,6 +13,7 @@ fun main() {
 
 /**
  * 函数作为参数的函数
+ * 如果函数使用了匿名函数作为参数, 那么该函数应该被声明为内联函数(inline)
  */
 private inline fun method01(age: Int, method02: (age: Int) -> Int): Int {
     var b = method02(age)

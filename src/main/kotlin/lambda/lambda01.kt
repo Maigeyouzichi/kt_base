@@ -16,7 +16,7 @@ fun main() {
  * 匿名函数类型推断
  */
 private fun function05() {
-    val method = {name:String,age:Int ->
+    val method = { name: String, age: Int ->//推断了入参
         //推断类型为String
         "name: $name , age: $age"
     }
@@ -27,9 +27,7 @@ private fun function05() {
  * it关键字 如果只有一个参数,it指其本身
  */
 private fun function04() {
-    val method : (String)-> String = {
-        "$it Java"
-    }
+    val method: (String) -> String = { "$it Java" }
     println(method("Hello"))
 }
 
@@ -38,12 +36,12 @@ private fun function04() {
  */
 private fun function03() {
 
-    val method : (Int,Int) -> Int = { a,b ->
+    val method: (Int, Int) -> Int = { a, b ->
         println("a: $a")
         println("b: $b")
         a + b
     }
-    println("a+b: ${method(1,2)}")
+    println("a+b: ${method(1, 2)}")
 }
 
 /**
@@ -51,7 +49,7 @@ private fun function03() {
  */
 private fun function02() {
     //1:函数输入输出的声明
-    val methodAction : () -> String
+    val methodAction: () -> String
     //2:函数实现
     methodAction = {
         val age = 11
@@ -77,6 +75,6 @@ private fun function01() {
     val len = "hello".count()
     println(len)//5
 
-    val rlen = "hello".count(){it == 'l'}//it等价于每个字符 Char
+    val rlen = "hello".count() { it == 'l' }//it等价于每个字符 Char
     println(rlen)//2
 }
