@@ -30,16 +30,35 @@ class Class06 {
 /**
  * kotlin初始化顺序流程: 调用次构造 -> 调用主构造 -> 执行主构造 -> field和init一个level,自上向下执行->次构造
  */
-class Class07 (name: String, sex: Char) {
+class Class07(_name: String, _sex: Char) {
 
     init {
-        println("init代码块打印name: $sex")
-        val nameValue = name
-        println("init代码块打印name: $name")
+        println("init代码块打印name: $_sex")
+        println("init代码块打印name: $_name")
     }
 
-    constructor(_name: String,_sex: Char,age: Int) : this(_name,_sex) {
+    //赋值和init代码块谁在前谁先执行
+    var name = _name
+    var sex = _sex
+
+    constructor(_name: String, _sex: Char, age: Int) : this(_name, _sex) {
         println("次构造执行 ....")
+    }
+}
+
+/**
+ * kotlin延时加载
+ */
+class Class08 {
+    //声明延时加载
+    lateinit var name: String
+    //判断是否加载
+    fun checkInit(): Boolean {
+        return ::name.isInitialized
+    }
+    //加载
+    fun initName() {
+        name = "Java"
     }
 }
 
@@ -53,7 +72,11 @@ fun main() {
 //    obj.age = 19
 //    println(obj.name)
 //    println(obj.age)
-    var obj = Class07("Java",'M',19)
 
-
+    var obj = Class08()
+    if (obj.checkInit()) {
+        println(obj.name)
+    }
+    obj.initName()
+    println(obj.name)
 }
