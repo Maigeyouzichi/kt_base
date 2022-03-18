@@ -27,13 +27,33 @@ class Class06 {
     var age: Int? = null
 }
 
+/**
+ * kotlin初始化顺序流程: 调用次构造 -> 调用主构造 -> 执行主构造 -> field和init一个level,自上向下执行->次构造
+ */
+class Class07 (name: String, sex: Char) {
+
+    init {
+        println("init代码块打印name: $sex")
+        val nameValue = name
+        println("init代码块打印name: $name")
+    }
+
+    constructor(_name: String,_sex: Char,age: Int) : this(_name,_sex) {
+        println("次构造执行 ....")
+    }
+}
+
 fun main() {
 //    val obj = Class05()
 //    val obj2 = Class05(_sex = 'M')
 //    println(obj2.name)
-    val obj = Class06()
-    obj.name = "Java"
-    obj.age = 19
-    println(obj.name)
-    println(obj.age)
+
+//    val obj = Class06()
+//    obj.name = "Java"
+//    obj.age = 19
+//    println(obj.name)
+//    println(obj.age)
+    var obj = Class07("Java",'M',19)
+
+
 }
