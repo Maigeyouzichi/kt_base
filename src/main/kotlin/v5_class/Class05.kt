@@ -52,13 +52,31 @@ class Class07(_name: String, _sex: Char) {
 class Class08 {
     //声明延时加载
     lateinit var name: String
+
     //判断是否加载
     fun checkInit(): Boolean {
         return ::name.isInitialized
     }
+
     //加载
     fun initName() {
         name = "Java"
+    }
+}
+
+class Class09 {
+
+    val age = initAge()
+    private fun initAge() : Int{
+        println("init age ...")
+        return 19
+    }
+
+    //初始化不加载,使用时进行加载,自动加载模式
+    val age2 by lazy { initAge2() }
+    private fun initAge2() : Int{
+        println("init age2 ...")
+        return 20
     }
 }
 
@@ -73,10 +91,15 @@ fun main() {
 //    println(obj.name)
 //    println(obj.age)
 
-    var obj = Class08()
-    if (obj.checkInit()) {
-        println(obj.name)
-    }
-    obj.initName()
-    println(obj.name)
+//    var obj = Class08()
+//    if (obj.checkInit()) {
+//        println(obj.name)
+//    }
+//    obj.initName()
+//    println(obj.name)
+    val obj = Class09()
+    println("-----")
+    println(obj.age)
+    println("-------")
+    println(obj.age2)
 }
