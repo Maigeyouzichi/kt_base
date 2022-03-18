@@ -16,7 +16,22 @@ interface CallBack {
     fun action()
 }
 
+class Class13{
+    //伴生对象
+    //Kotlin中没有Java中的static, 这种方式替代static
+    companion object{
+        const val info = "Hello World"
+        fun invoke() {
+            println("Hello Java")
+        }
+
+    }
+}
+
 fun main() {
+    println(Class13.info)
+    Class13.invoke()
+
 //    println(Class12)
 //    println(Class12)
 //    println(Class12)
