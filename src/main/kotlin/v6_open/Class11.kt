@@ -24,4 +24,17 @@ fun main() {
 
     val stu = Student("Python")
     println(stu.showName())
+    println("----")
+
+    val p : Person = Student("Kotlin")
+    println(p.javaClass.toString())
+    println(p.showName())
+    println("----")
+
+    println("类型转换")
+
+    var person = p as Person
+    println(person.javaClass)
+    println(person.showName())
+
 }
