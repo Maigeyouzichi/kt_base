@@ -2,6 +2,9 @@ package v6_open
 
 /**
  * 数据类
+ * 使用场景: 1,服务器响应回来的JavaBean
+ *          2,主构造函数至少有一个参数
+ *          3,不能使用 open abstract sealed inner ..
  * @author lihao on 2022/3/19
  */
 data class Class15(var name: String) {
