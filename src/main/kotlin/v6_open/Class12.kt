@@ -37,6 +37,11 @@ fun main() {
 //    println(Class12)
 //    println(Class12)//名字就是指向单例对象
 
+    println(Class12.hashCode())
+    println(Class12.hashCode())
+    println(Class12.hashCode())
+    println(Class12.hashCode())
+
     //匿名类继承父类
     var obj = object : Parent() {
         override fun add(){ println("我是匿名类的add")}
