@@ -5,6 +5,7 @@ package v6_open
  * @author lihao on 2022/3/20
  *
  * ps: 文件也能扩展,import导入就可以用了,一个意思, 一样理解即可
+ *     引入后 as 起别名 调用简便 (个人觉得没吊用,自己起名,越起越乱,什么妖魔鬼怪都出来了)
  */
 class Class26 {
 }
