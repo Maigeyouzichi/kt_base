@@ -17,10 +17,10 @@ fun main() {
     println(list2)
     println("map操作---")
     //flatMap
-    var flatMap = list.flatMap { listOf(it + 1) }
+    var flatMap = list.flatMap { listOf(it + 1, it+1) }
     for (obj in flatMap) {
         println(obj)
-        println(obj.javaClass.toGenericString())
+        //println(obj.javaClass.toGenericString())
     }
     println("flatMap操作----")
     //filter
